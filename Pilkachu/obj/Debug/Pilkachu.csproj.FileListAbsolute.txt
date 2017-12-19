@@ -1,0 +1,15 @@
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\bin\Debug\Pilkachu.exe.config
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\bin\Debug\Pilkachu.exe
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\bin\Debug\Pilkachu.pdb
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.csprojResolveAssemblyReference.cache
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\MainWindow.g.cs
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\App.g.cs
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu_MarkupCompile.cache
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu_MarkupCompile.lref
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\MainWindow.baml
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.g.resources
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.Properties.Resources.resources
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.csproj.GenerateResource.Cache
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.csproj.CoreCompileInputs.cache
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.exe
+C:\Users\kidevelop\source\repos\Pilkachu\Pilkachu\obj\Debug\Pilkachu.pdb

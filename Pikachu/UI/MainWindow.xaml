@@ -1,0 +1,25 @@
+﻿<Window x:Class="Pikachu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pikachu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300" WindowStyle="None" Background="#FF252529" MinWidth="200" MinHeight="300">
+
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="25" ResizeBorderThickness="5" NonClientFrameEdges="None" GlassFrameThickness="10" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid Height="25" x:Name="Title" VerticalAlignment="Top">
+            <Rectangle Height="25" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Characters" VerticalAlignment="Center" Foreground="#FFDBD4DE" FontFamily="Malgun Gothic" FontWeight="Bold"/>
+            <Ellipse Fill="#FFFC5754" HorizontalAlignment="Left" Height="12" Margin="8,0,0,0" VerticalAlignment="Center" Width="12"/>
+            <Ellipse Fill="#FFFDBE41" HorizontalAlignment="Left" Height="12" Margin="28,0,0,0" VerticalAlignment="Center" Width="12"/>
+            <Ellipse Fill="#FF35CD4B" HorizontalAlignment="Left" Height="12" Margin="48,0,0,0" VerticalAlignment="Center" Width="12"/>
+        </Grid>
+    </Grid>
+</Window>

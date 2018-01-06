@@ -5,21 +5,116 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pikachu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300" WindowStyle="None" Background="#FF252529" MinWidth="200" MinHeight="300">
-
+        Title="MainWindow" Height="300" Width="400" WindowStyle="None" Background="#FF252529" MinWidth="300" MinHeight="400" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseDoubleClick="Window_MouseDoubleClick">
+    <Window.Resources>
+        <Storyboard x:Key="MenuOn">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="grid">
+                <EasingThicknessKeyFrame KeyTime="0" Value="-300,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuOff">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="grid">
+                <EasingThicknessKeyFrame KeyTime="0" Value="0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="-300,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
 
     <WindowChrome.WindowChrome>
         <WindowChrome 
-        CaptionHeight="25" ResizeBorderThickness="5" NonClientFrameEdges="None" GlassFrameThickness="10" UseAeroCaptionButtons="False" />
+        CaptionHeight="0" ResizeBorderThickness="5" NonClientFrameEdges="None" GlassFrameThickness="10" UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>
 
+
     <Grid>
-        <Grid Height="25" x:Name="Title" VerticalAlignment="Top">
-            <Rectangle Height="25" Margin="0" VerticalAlignment="Top" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Characters" VerticalAlignment="Center" Foreground="#FFDBD4DE" FontFamily="Malgun Gothic" FontWeight="Bold"/>
-            <Ellipse Fill="#FFFC5754" HorizontalAlignment="Left" Height="12" Margin="8,0,0,0" VerticalAlignment="Center" Width="12"/>
-            <Ellipse Fill="#FFFDBE41" HorizontalAlignment="Left" Height="12" Margin="28,0,0,0" VerticalAlignment="Center" Width="12"/>
-            <Ellipse Fill="#FF35CD4B" HorizontalAlignment="Left" Height="12" Margin="48,0,0,0" VerticalAlignment="Center" Width="12"/>
+
+        <Grid Height="50" x:Name="Title" VerticalAlignment="Top">
+            <Rectangle Height="50" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Characters" VerticalAlignment="Center" Foreground="#FFDBD4DE" FontFamily="Malgun Gothic" FontWeight="Bold" FontSize="14"/>
+            <Grid x:Name="MenuButton" Width="50" Height="50" Background="#FF252529" HorizontalAlignment="Left" VerticalAlignment="Top" MouseEnter="TitleButton_MouseEnter" MouseLeave="TitleButton_MouseLeave" MouseLeftButtonDown="MenuButton_MouseLeftButtonDown">
+                <Grid Width="16" Height="16" x:Name="Menu" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                    <Rectangle Height="1" VerticalAlignment="Top" Fill="White" Margin="0,2,0,0"/>
+                    <Rectangle Height="1" VerticalAlignment="Center" Fill="White"/>
+                    <Rectangle Height="1" VerticalAlignment="Bottom" Fill="White" Margin="0,0,0,2"/>
+                </Grid>
+            </Grid>
+            <Grid x:Name="CloseButton" Width="50" Height="50" Background="#FF252529" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="TitleButton_MouseEnter" MouseLeave="TitleButton_MouseLeave" MouseLeftButtonDown="CloseButton_MouseLeftButtonDown">
+                <Grid Width="16" Height="16" x:Name="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                    <Rectangle Height="1" VerticalAlignment="Center" Fill="White" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="16">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="45"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Height="1" VerticalAlignment="Center" Fill="White" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="16">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="135"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="grid" Width="250" HorizontalAlignment="Left" Background="#FF252529" Margin="-300,0,0,0">
+            <Grid.Effect>
+                <DropShadowEffect Direction="360" Opacity="0.25" BlurRadius="35"/>
+            </Grid.Effect>
+            <Grid x:Name="MenuTitle" Height="50" VerticalAlignment="Top">
+                <TextBlock HorizontalAlignment="Left" Margin="16,0,0,0" TextWrapping="Wrap" Text="Menu" VerticalAlignment="Center" Foreground="#FFDBD4DE" FontFamily="Malgun Gothic" FontWeight="Bold" FontSize="14"/>
+                <Grid x:Name="BackButton" Width="50" Height="50" Background="#FF252529" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="TitleButton_MouseEnter" MouseLeave="TitleButton_MouseLeave" MouseLeftButtonDown="BackButton_MouseLeftButtonDown">
+                    <Grid Width="16" Height="16" x:Name="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                        <Rectangle Height="1" VerticalAlignment="Top" Fill="White" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="9" Margin="0,4,0,0">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="135"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Rectangle Height="1" VerticalAlignment="Bottom" Fill="White" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="9" Margin="0,0,0,4">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Rectangle Height="1" VerticalAlignment="Center" Fill="White" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="15" Margin="0">
+
+                        </Rectangle>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

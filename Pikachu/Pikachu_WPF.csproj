@@ -136,7 +136,9 @@
   <ItemGroup>
     <Resource Include="Resources\C_pikachu.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI\UserControl\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="UI\UIResource\exit.png" />
     <Resource Include="UI\UIResource\max.png" />

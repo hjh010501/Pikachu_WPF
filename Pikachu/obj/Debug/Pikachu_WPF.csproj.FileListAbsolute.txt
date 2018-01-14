@@ -35,3 +35,9 @@ C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\Pikachu.exe
 C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\Pikachu.pdb
 C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\MainWindow.g.cs
 C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\MainWindow.baml
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\Style\WindowStyle.baml
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\UserControl\CharacterBox.g.cs
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\UserControl\CharacterListBox.g.cs
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\UserControl\CharacterBox.baml
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\UI\UserControl\CharacterListBox.baml
+C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\obj\Debug\GeneratedInternalTypeHelper.g.cs

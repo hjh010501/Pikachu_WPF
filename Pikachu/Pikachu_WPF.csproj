@@ -73,6 +73,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UI\UserControl\CharacterBox.xaml.cs">
+      <DependentUpon>CharacterBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControl\CharacterListBox.xaml.cs">
+      <DependentUpon>CharacterListBox.xaml</DependentUpon>
+    </Compile>
     <Page Include="CharacterUI\CharacterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +99,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UI\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Style\WindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControl\CharacterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControl\CharacterListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,9 +154,7 @@
   <ItemGroup>
     <Resource Include="Resources\C_pikachu.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\UserControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="UI\UIResource\exit.png" />
     <Resource Include="UI\UIResource\max.png" />

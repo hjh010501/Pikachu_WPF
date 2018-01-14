@@ -29,36 +29,9 @@ namespace Pikachu
             MenuOff = (Storyboard)FindResource("MenuOff");
         }
 
-        private void TitleButton_MouseEnter(object sender, MouseEventArgs e)
-        {
-            ((Grid)sender).Background = new SolidColorBrush(Color.FromRgb(30,30,32));
-        }
-
-        private void TitleButton_MouseLeave(object sender, MouseEventArgs e)
-        {
-            ((Grid)sender).Background = new SolidColorBrush(Color.FromRgb(37,37,41));
-        }
-
-        private void CloseButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
-        }
-
-        private void MenuButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MenuOff.Stop();
-            MenuOn.Begin();
-        }
-
-        private void BackButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MenuOn.Stop();
-            MenuOff.Begin();
         }
 
         private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -71,5 +44,23 @@ namespace Pikachu
                 this.WindowState = WindowState.Maximized;
             }
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            MenuOff.Stop();
+            MenuOn.Begin();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MenuOn.Stop();
+            MenuOff.Begin();
+        }
+
     }
 }

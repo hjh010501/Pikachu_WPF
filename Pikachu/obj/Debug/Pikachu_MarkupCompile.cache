@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\kidevelop\Documents\Pikachu_WPF\Pikachu\App.xaml
-3224478588
+6599022948
 
-11782909153
+9-1648274720
 141320664073
-CharacterUI\CharacterWindow.xaml;CharacterUI\HideAltTab.xaml;UI\MainWindow.xaml;
+CharacterUI\CharacterWindow.xaml;CharacterUI\HideAltTab.xaml;UI\MainWindow.xaml;UI\Style\WindowStyle.xaml;UI\UserControl\CharacterBox.xaml;UI\UserControl\CharacterListBox.xaml;
 
-True
+False
 
